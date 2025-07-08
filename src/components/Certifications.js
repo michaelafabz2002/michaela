@@ -31,7 +31,7 @@ const Certifications = ({ id, activeSection }) => {
         </div>
         <div className={styles['certification-card']}>
           <h3>Certificate of Completion (On-The-Job Training)</h3>
-          <p className={styles.issuer}>Justine's Cargo Services</p>
+          <p className={styles.issuer}>Justine&apos;s Cargo Services</p>
           <p className={styles.date}>May 2025</p>
           
         </div>

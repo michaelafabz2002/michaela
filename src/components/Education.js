@@ -11,7 +11,7 @@ const Education = ({ id, activeSection }) => {
         <p className={styles.university}>Central Philippine University</p>
         <p className={styles.duration}>2021-2025</p>
         <ul className={styles['achievements-list']}>
-          <li>Dean's List, 1st Semester, 2021-22</li>
+          <li>Dean&apos;s List, 1st Semester, 2021-22</li>
           <li>Vice President For External Affairs of ITSO (Information Technology Student Organization), 2022-2023</li>
           <li>Thesis Statement: Information and Operation Management System for Justines Cargo Services, GUI (Graphics User Interface Designer) 2018-2020</li>
         </ul>

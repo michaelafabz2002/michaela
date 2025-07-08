@@ -8,9 +8,9 @@ const About = ({ id, activeSection }) => {
       <h2>About Me</h2>
       <div className={styles['about-content']}>
         <div className={styles['about-intro']}>
-          <h3>Hello, I'm Michaela!</h3>
+          <h3>Hello, I&apos;m Michaela!</h3>
           <p>
-            I'm a passionate and driven developer, constantly exploring new technologies and crafting innovative solutions. My journey in tech is fueled by curiosity and a desire to build impactful digital experiences. I believe in continuous learning and always strive to deliver high-quality, efficient, and user-centric applications.
+            I&apos;m a passionate and driven developer, constantly exploring new technologies and crafting innovative solutions. My journey in tech is fueled by curiosity and a desire to build impactful digital experiences. I believe in continuous learning and always strive to deliver high-quality, efficient, and user-centric applications.
           </p>
           <div className={styles['skill-boxes']}>
             <div className={styles['skill-box']}>
