@@ -155,7 +155,7 @@
 @keyframes fade-in-up {
   from {
     opacity: 0;
-    transform: translateY(30px); /* Increased initial translation */
+    transform: translateY(20px); /* Slightly reduced initial translation for a softer start */
   }
   to {
     opacity: 1;
@@ -164,13 +164,14 @@
 }
 
 .hero.animate-in {
-  animation: fade-in-up 1.0s cubic-bezier(0.23, 1, 0.32, 1) forwards; /* Longer duration, custom ease */
+  animation: fade-in-up 0.8s ease-out forwards;
+  will-change: transform, opacity;
 }
 
 @keyframes fade-in-scale {
   from {
     opacity: 0;
-    transform: scale(0.8); /* Slightly smaller initial scale */
+    transform: scale(0.9); /* Slightly larger initial scale for a softer start */
   }
   to {
     opacity: 1;
@@ -179,5 +180,6 @@
 }
 
 .profile-pic.animate-in {
-  animation: fade-in-scale 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards; /* Longer duration, custom ease */
+  animation: fade-in-scale 1.0s ease-out forwards; /* Reduced duration, changed to ease-out */
+  will-change: transform, opacity;
 } 
