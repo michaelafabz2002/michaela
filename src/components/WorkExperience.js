@@ -41,7 +41,7 @@ const WorkExperience = ({ id, activeSection }) => {
         <h3>Office Staff & Web Developer / IT Tech Support</h3>
         <div className={styles['company-duration-row']}>
           <div className={styles['company-info']}>
-            <p className={styles.company}>Justine's Cargo Services</p>
+            <p className={styles.company}>Justine&apos;s Cargo Services</p>
             <p className={styles.role}>On the Job Training <span className={styles.duration}>(Feb - May 2025)</span></p>
             <p className={styles.role}>Part-Time <span className={styles.duration}>(June 16 - June 27, 2025)</span></p>
           </div>

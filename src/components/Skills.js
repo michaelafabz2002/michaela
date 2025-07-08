@@ -58,7 +58,7 @@ const skillsData = [
           <div className={styles['skill-card']}>
             <h4>Firebase</h4>
             <span className={styles['skill-type']}>Backend-as-a-Service</span>
-            <p>Google's mobile platform that helps you quickly develop high-quality apps and grow your business.</p>
+            <p>Google&apos;s mobile platform that helps you quickly develop high-quality apps and grow your business.</p>
           </div>
         </div>
       </div>
