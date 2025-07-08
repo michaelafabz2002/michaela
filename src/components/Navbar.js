@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Navbar.module.css';
 
 const Navbar = ({ activeSection, setActiveSection }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleClick = (id) => {
     setActiveSection(id);
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    setMenuOpen(false); // Close menu on link click
   };
 
   return (
     <nav className={styles.navbar}>
-
-      <ul className={styles['nav-links']}>
+      <button
+        className={styles.hamburger}
+        onClick={() => setMenuOpen((open) => !open)}
+        aria-label="Toggle navigation menu"
+      >
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
+      </button>
+      <ul className={`${styles['nav-links']} ${menuOpen ? styles.open : ''}`}>
         <li><a href="#hero" className={activeSection === 'hero' ? styles.active : ''} onClick={() => handleClick('hero')}>Home</a></li>
         <li><a href="#about" className={activeSection === 'about' ? styles.active : ''} onClick={() => handleClick('about')}>About</a></li>
         <li><a href="#projects" className={activeSection === 'projects' ? styles.active : ''} onClick={() => handleClick('projects')}>Projects</a></li>
