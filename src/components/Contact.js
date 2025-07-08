@@ -11,12 +11,7 @@ const Contact = ({ id, activeSection }) => {
         <p><strong>Email:</strong> fabrigarmichaela1@gmail.com</p>
         <p><strong>Address:</strong> 423 Cabugao Sur Pavia</p>
       </div>
-      <form className={styles.form}>
-        <input type="text" placeholder="Your Name" required className={styles.input} />
-        <input type="email" placeholder="Your Email" required className={styles.input} />
-        <textarea placeholder="Your Message" required className={styles.textarea}></textarea>
-        <button type="submit" className={styles.button}>Send</button>
-      </form>
+      
     </section>
   );
 };
