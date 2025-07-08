@@ -1,0 +1,59 @@
+.about {
+  padding: 80px 20px;
+  background-color: var(--card-background);
+  color: var(--text-dark);
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.about h2 {
+  margin-bottom: 40px;
+  color: var(--primary);
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+/* Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about.animate-in {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 20px;
+  }
+
+  .about h2 {
+    margin-bottom: 30px;
+  }
+
+  .about p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 40px 15px;
+  }
+
+  .about h2 {
+    margin-bottom: 20px;
+  }
+} 

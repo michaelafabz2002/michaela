@@ -1,0 +1,176 @@
+.certifications {
+  padding: 80px 20px;
+  background-color: var(--background);
+  color: var(--foreground);
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.certifications h2 {
+  margin-bottom: 50px;
+  color: var(--primary);
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.certification-card {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 25px;
+  text-align: left;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-8px) rotate(1deg);
+  box-shadow: 0 12px 25px var(--shadow-color);
+  border-color: var(--primary);
+}
+
+.certification-card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+  font-size: 1.6em;
+}
+
+.certification-card .issuer,
+.certification-card .date {
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 5px;
+}
+
+.certification-card .link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: var(--primary);
+  color: var(--background);
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.certification-card .link:hover {
+  background-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.certifications.animate-in {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  .certifications {
+    padding: 60px 20px;
+  }
+
+  .certifications h2 {
+    margin-bottom: 40px;
+  }
+
+  .certifications-grid {
+    gap: 15px;
+  }
+
+  .certification-card {
+    padding: 20px;
+  }
+
+  .certification-card h3 {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 480px) {
+  .certifications {
+    padding: 40px 15px;
+  }
+
+  .certifications h2 {
+    margin-bottom: 30px;
+  }
+
+  .certification-card {
+    padding: 15px;
+  }
+
+  .certification-card h3 {
+    font-size: 1.2em;
+  }
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85); /* Dark semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* Ensure it's above other content */
+  backdrop-filter: blur(5px); /* Optional: blur background content */
+}
+
+.modal-content {
+  position: relative;
+  background-color: var(--card-background);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden; /* Hide overflow from image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-image {
+  max-width: 80%;
+  max-height: 80vh;
+  display: block;
+  object-fit: contain;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: var(--primary); /* Use primary color for close button */
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.modal-close-button:hover {
+  color: var(--accent); /* Accent color on hover */
+  transform: scale(1.2);
+} 

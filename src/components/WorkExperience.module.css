@@ -1,0 +1,155 @@
+.work-experience {
+  padding: 80px 20px;
+  background-color: var(--background);
+  color: var(--foreground);
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.work-experience h2 {
+  margin-bottom: 50px;
+  color: var(--primary);
+}
+
+.experience-item {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 20px;
+  text-align: left;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.experience-item:hover {
+  transform: translateY(-8px) rotate(-1deg);
+  box-shadow: 0 12px 25px var(--shadow-color);
+  border-color: var(--primary);
+}
+
+.experience-item h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+  font-size: 1.8em;
+}
+
+.company-duration-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.experience-item .company {
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 2px;
+  font-size: 1.2em;
+}
+
+.experience-item .role {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 1.05em;
+  margin-top: 0;
+}
+
+.durationTag {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--foreground);
+  box-shadow: 0 2px 5px var(--shadow-color);
+  white-space: nowrap;
+  background: linear-gradient(to right, var(--background), var(--card-background));
+  color: var(--foreground);
+}
+
+.experience-item .duration {
+  font-style: italic;
+  color: var(--secondary);
+  margin-bottom: 15px;
+}
+
+.responsibilities-list {
+  list-style: disc;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--foreground);
+}
+
+.responsibilities-list li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.work-experience.animate-in {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  .work-experience {
+    padding: 60px 20px;
+  }
+
+  .work-experience h2 {
+    margin-bottom: 40px;
+  }
+
+  .experience-item {
+    padding: 25px;
+  }
+
+  .experience-item h3 {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 480px) {
+  .work-experience {
+    padding: 40px 15px;
+  }
+
+  .work-experience h2 {
+    margin-bottom: 30px;
+  }
+
+  .experience-item {
+    padding: 20px;
+  }
+
+  .experience-item h3 {
+    font-size: 1.4em;
+  }
+
+  .responsibilities-list {
+    padding-left: 15px;
+  }
+} 
